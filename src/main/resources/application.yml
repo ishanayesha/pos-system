@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: pos-system
+  datasource:
+    url: jdbc:mysql://localhost:3306/pos_db
+    username: root
+    password:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+  #  security:
+  #    user:
+  #      name: ishan
+  #      password: ishan
+  security:
+    basic:
+      enabled: false
+
+server:
+  port: 9000
+
+jwt:
+  secret: possystem
+
+info:
+  app:
+    name: pos system
+    version: "@project.version@"
